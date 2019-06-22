@@ -1,4 +1,5 @@
 
+
 // to komewntarz
 pipeline {
     agent { label 'glowne' }
