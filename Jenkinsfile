@@ -4,7 +4,7 @@
 pipeline {
     agent { label 'glowne' }
     environment {
-       PATH="/bin:/sbin:/usr/bin"
+       PATH="/bin:/sbin:/usr/bin:~/.local/bin"
     }
     stages {
         stage('check pips') {
