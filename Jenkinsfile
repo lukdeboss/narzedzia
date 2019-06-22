@@ -14,6 +14,7 @@ pipeline {
             /// sh 'yum -y install centos-release-scl'
             /// sh 'yum -y install rh-python36'
             // enable p3 w bashu  nie wiem czy permanentnie
+            sh 'rpm -ql rh-python36'
             sh 'scl enable rh-python36 bash'
             sh 'python --version'
             sh 'rh-python36 -m ensurepip'
