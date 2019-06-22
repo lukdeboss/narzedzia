@@ -10,6 +10,7 @@ pipeline {
             steps {
             sh 'yum -y install epel-release'
             sh 'yum -y install python-pip'
+            sh 'yum -y install python3-pip'
             sh 'python --version'
             sh 'pip --version'
             sh 'pip3 --version'
