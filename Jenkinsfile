@@ -21,7 +21,7 @@ pipeline {
             // sh 'rh-python36 -m ensurepip'
             sh 'pip install awscli --upgrade --user'
             sh 'pip install --upgrade pip'
-            sh 'awscli --version'
+            sh 'aws --version'
             }
         }
         stage('instalacja ansible') {
