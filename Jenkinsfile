@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('check pips') {
             steps {
+            sh 'python --version'
             sh 'pip --version'
             sh 'pip3 --version'
             }
