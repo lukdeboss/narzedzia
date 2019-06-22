@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('check pips') {
             steps {
-            sh 'yum install epel-release'
-            sh 'yum install python-pip'
+            sh 'yum -y install epel-release'
+            sh 'yum -y install python-pip'
             sh 'python --version'
             sh 'pip --version'
             sh 'pip3 --version'
