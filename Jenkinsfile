@@ -9,7 +9,7 @@ pipeline {
         stage('check pips') {
             steps {
             sh 'yum search pip'
-            sh 'yum install python3-pip'
+            sh 'python -m pip install -U pip'
             sh 'python --version'
             sh 'pip --version'
             sh 'pip3 --version'
