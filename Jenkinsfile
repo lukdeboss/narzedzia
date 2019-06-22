@@ -9,14 +9,14 @@ pipeline {
         stage('check pips') {
             steps {
             // epel wymagane do pip
-            sh 'yum -y install epel-release'
-            sh 'yum -y install python-pip'
-            sh 'yum -y install centos-release-scl'
-            sh 'yum -y install rh-python36'
+            /// sh 'yum -y install epel-release'
+            /// sh 'yum -y install python-pip'
+            /// sh 'yum -y install centos-release-scl'
+            /// sh 'yum -y install rh-python36'
             // enable p3 w bashu  nie wiem czy permanentnie
             sh 'scl enable rh-python36 bash'
             sh 'python --version'
-            sh 'python36 -m ensurepip'
+            sh 'rh-python36 -m ensurepip'
             sh 'pip3 install awscli --upgrade --user'
             sh 'aws --version'
             }
