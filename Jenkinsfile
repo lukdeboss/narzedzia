@@ -8,13 +8,14 @@ pipeline {
     stages {
         stage('check pips') {
             steps {
+            // epel wymagane do pip
             sh 'yum -y install epel-release'
             sh 'yum -y install python-pip'
-            sh 'yum -y install python3'
-            sh 'yum -y install python3-pip'
+            sh 'yum install centos-release-scl'
+            sh 'yum install rh-python36'
+            // enable p3 w bashu  nie wiem czy permanentnie
+            sh 'scl enable rh-python36 bash'
             sh 'python --version'
-            sh 'pip --version'
-            sh 'pip3 --version'
             }
         }
         stage('instalacja ansible') {
