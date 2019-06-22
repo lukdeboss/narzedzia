@@ -17,7 +17,7 @@ pipeline {
             sh 'scl enable rh-python36 bash'
             sh 'python --version'
             sh 'pip3 install awscli --upgrade --user'
-            sh 'python -m ensurepip"
+            sh 'python -m ensurepip'
             sh 'aws --version'
             }
         }
