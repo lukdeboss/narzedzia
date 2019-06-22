@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage('check pips') {
             steps {
+            sh 'yum install python-pip'
+            sh 'yum install python3-pip'
             sh 'python --version'
             sh 'pip --version'
             sh 'pip3 --version'
