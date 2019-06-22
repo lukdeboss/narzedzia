@@ -16,6 +16,8 @@ pipeline {
             // enable p3 w bashu  nie wiem czy permanentnie
             sh 'scl enable rh-python36 bash'
             sh 'python --version'
+            sh 'pip3 install awscli --upgrade --user'
+            sh 'aws --version'
             }
         }
         stage('instalacja ansible') {
