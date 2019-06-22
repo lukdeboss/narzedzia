@@ -6,7 +6,7 @@ pipeline {
        PATH="/bin:/sbin:/usr/bin"
     }
     stages {
-        stage('check pip') {
+        stage('check pips') {
             steps {
             sh 'pip --version'
             sh 'pip3 --version'
